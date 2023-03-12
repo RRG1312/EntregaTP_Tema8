@@ -1,13 +1,29 @@
 package org.example;
 
 public class Cliente {
-    String nombre ;
-    String numeroCliente="COD-";
-    long contador =0;
+    private String nombre ;
+    private String numeroCliente="CLIENTE-";
+    static private long contador =1;
 
     public Cliente(String nombre){
         this.nombre = nombre;
         this.numeroCliente+=contador;
-        this.contador++;
+        contador++;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getNumeroCliente() {
+        return this.numeroCliente;
+    }
+
+    @Override
+    public String toString() {
+        return "Nombre: "+this.nombre+",  Codigo: "+this.numeroCliente;
+    }
+
+
+
 }
